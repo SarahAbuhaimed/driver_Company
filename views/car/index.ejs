@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="utf-8">
+ 
+    <title>index</title>
+  </head>
+  <body>
+    <h1>Car index page</h1>
+    <nav>
+        <a href="/cars/new">Create a New Car </a>
+    </nav>
+    <ul>
+      <% for(let i = 0; i < cars.length; i++) { %>
+        <li>
+          <a href="/cars/<%= cars[i].id %>"><%=cars[i].name %> </a>
+              <form action="/cars/<%= cars[i].id %>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE"/>
+            </form>
+            <a href="/cars/<%= cars[i]._id %>/edit"> Edit</a>
+        </li>
+      <% } %>
+    </ul>
+   
+  </body>
+</html>

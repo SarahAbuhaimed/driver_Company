@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/app.css">
+    <title></title></head>
+  <body>
+    <h1>Edit driver Page</h1>
+    <form action="/drivers/<%= driver._id %>?_method=put" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="<%= driver.name %>"/>
+      <% cars.forEach(car => { %>
+        <input type="checkbox" name="drivercarsArray" value="<%= car._id %>"
+        ><%= car.name %>
+      <% }) %> 
+      <input type="submit" value="Edit driver">
+      <a href="/drivers">Back</a>
+    </form>
+  </body>
+</html>

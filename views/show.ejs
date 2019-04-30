@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+    <meta charset="utf-8">
+    <title>Companies</title>
+  
+  </head>
+  <body>
+    <h1>Companies show page</h1>
+    <img src="<%= companies.logo; %>" alt="logo">
+  <ul><li>name: <%=companies.name; %></li>
+  <li> address: <%=companies.address; %></li>
+  <li>city: <%=companies.city; %></li>
+  <li>telephone: <%=companies.telephone; %></li>
+  <li> driver name: <%=companies.driver.name; %></li>
+  <li>age: <%=companies.driver.age; %></li>
+  <img src="<%=companies.driver.image; %>" alt="driver img">
+  <li>Car name: <%=companies.car.name; %></li>
+  <li> Car model: <%=companies.car.model; %></li>
+  <li>Car year: <%=companies.car.year; %></li>
+  <img src="<%=companies.car.image; %>" alt="car img">
+</ul> 
+    
+  </body>
+</html> 

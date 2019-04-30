@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        
+    <meta charset="utf-8">
+    <title>Companies</title>
+
+  </head>
+  <body>
+    <h1>New Company Page</h1>
+    <form action="/companies" method="POST">
+      <label >Name</label>
+      <input type="text" name="name" id="name"/>
+      <label >address</label>
+      <input type="text" name="address" id="address" />
+      <label >logo</label>
+      <input type="text" name="logo" id="logo"/>
+      <br>
+      <label >city</label>
+      <input type="text" name="city" id="city" />
+      <label >telephone</label>
+      <input type="text" name="telephone" id="telephone"/>
+<br>
+<% cars.forEach(car => { %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.name %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.model %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.year %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.image %> 
+<% }) %>
+     <br>
+     <% drivers.forEach(driver => { %>
+      <input type="checkbox" name="companyDriversArray" value="  <%= driver._id %>"><%= driver.name %>
+      <input type="checkbox" name="companyDriversArray" value="  <%= driver._id %>"><%= driver.age %>
+      <input type="checkbox" name="companyDriversArray" value="  <%= driver._id %>"><%= driver.image %>
+      <% }) %>
+<br>
+      <input type="submit" value="Create Company">
+     
+    </form> <a href="/companies"><button>Back</button> </a>
+    
+  </body>
+</html>

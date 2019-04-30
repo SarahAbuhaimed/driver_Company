@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/app.css">
+    <meta charset="utf-8">
+    <title>drivers</title>
+  </head>
+  <body>
+    <h1>drivers show page</h1>
+  <b> <%= driver.name %> <br>
+    <%= driver.age %>
+    <img src="<%= driver.image %>" alt="driver img">
+    <% driver.cars.forEach(car => { %> <%= car.name %> 
+ <% }) %>
+    </b>  
+     <a href="/drivers">Back</a>
+  </body>
+</html> 

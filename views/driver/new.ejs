@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        
+    <meta charset="utf-8">
+    <title>Drivers</title>
+
+  </head>
+  <body>
+    <h1>New driver Page</h1>
+    <form action="/companies" method="POST">
+      <label >Name</label>
+      <input type="text" name="name" name="companyDriversArray" id="name"/>
+      <label > age</label>
+      <input type="text" name="age" name="companyDriversArray" id=" age" />
+      <label >image</label>
+      <input type="text" name="image" name="companyDriversArray" id="image"/>
+      <br>
+    
+<br>
+<% cars.forEach(car => { %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.name %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.model %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.year %>
+<input type="checkbox" name="companyCarsArray" value="  <%= car._id %>"><%= car.image %> 
+<% }) %>
+     
+<br>
+      <input type="submit" value="Create Driver">
+     
+    </form> <a href="/driverss"><button>Back</button> </a>
+    
+  </body>
+</html>
